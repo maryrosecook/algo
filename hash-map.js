@@ -42,11 +42,10 @@ function hash(string) {
 
   var hashInt = 0;
   for (var i = 0; i < string.length; i++) {
-    hashInt = hashInt * 31 + string.charCodeAt(i);
-    hashInt = hashInt | 0;
+    hashInt += string.charCodeAt(i);
   }
 
-  return hashInt;
+  return hashInt % 20;
 };
 
 var hashMap = new HashMap();
@@ -54,7 +53,7 @@ var hashMap = new HashMap();
 hashMap.set("a", 1);
 hashMap.set("b", 2);
 hashMap.set("a", 3);
-console.log(hashMap.get("a"));
-console.log(hashMap.get("b"));
-console.log(hashMap.get("c"));
-console.log(hashMap.get({}));
+for (var i = 0; i < 30; i++) {
+  hashMap.set(i.toString(), i);
+}
+console.log(hashMap.data)
