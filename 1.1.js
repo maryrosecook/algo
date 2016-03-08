@@ -7,22 +7,7 @@
 // Can I assume a string of less than a certain length? Yes less than 100,000
 // Can I assume this is representatve: "anuehconuhcuho"
 
-function assert(assertion) {
-  if (assertion !== true) {
-    throw new Error("Assertion failed");
-  }
-};
-
-function assertThrows(message, fn) {
-  try {
-    fn()
-    throw new Error("Expected exception with message: " + message);
-  } catch (e) {
-    if (e.message !== message) {
-      throw new Error("Expected exception with message: " + message);
-    }
-  }
-};
+var u = require("./util");
 
 // Time complexity: O(1)
 // Space complexity: not sure (added question to my list)
@@ -47,14 +32,14 @@ function hasUniqueCharacters(str) {
   return true; // return O(1)
 };
 
-assert(hasUniqueCharacters("abc") === true);
-assert(hasUniqueCharacters("abb") === false);
-assert(hasUniqueCharacters("") === true);
-assert(hasUniqueCharacters("bab") === false);
-assertThrows("You must pass a string", function() {
+u.assert(hasUniqueCharacters("abc") === true);
+u.assert(hasUniqueCharacters("abb") === false);
+u.assert(hasUniqueCharacters("") === true);
+u.assert(hasUniqueCharacters("bab") === false);
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharacters();
 });
-assertThrows("You must pass a string", function() {
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharacters(1);
 });
 
@@ -76,14 +61,14 @@ function hasUniqueCharactersNoHash(str) {
   return true;
 };
 
-assert(hasUniqueCharactersNoHash("abc") === true);
-assert(hasUniqueCharactersNoHash("abb") === false);
-assert(hasUniqueCharactersNoHash("") === true);
-assert(hasUniqueCharactersNoHash("bab") === false);
-assertThrows("You must pass a string", function() {
+u.assert(hasUniqueCharactersNoHash("abc") === true);
+u.assert(hasUniqueCharactersNoHash("abb") === false);
+u.assert(hasUniqueCharactersNoHash("") === true);
+u.assert(hasUniqueCharactersNoHash("bab") === false);
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersNoHash();
 });
-assertThrows("You must pass a string", function() {
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersNoHash(1);
 });
 
@@ -120,14 +105,14 @@ function hasUniqueCharactersArray(str) {
   return true;
 };
 
-assert(hasUniqueCharactersArray("abc") === true);
-assert(hasUniqueCharactersArray("abb") === false);
-assert(hasUniqueCharactersArray("") === true);
-assert(hasUniqueCharactersArray("bab") === false);
-assertThrows("You must pass a string", function() {
+u.assert(hasUniqueCharactersArray("abc") === true);
+u.assert(hasUniqueCharactersArray("abb") === false);
+u.assert(hasUniqueCharactersArray("") === true);
+u.assert(hasUniqueCharactersArray("bab") === false);
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersArray();
 });
-assertThrows("You must pass a string", function() {
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersArray(1);
 });
 
@@ -158,14 +143,14 @@ function hasUniqueCharactersBit(str) {
 };
 
 
-assert(hasUniqueCharactersArray("abcdefghijklmnopqrstuvwxyz") === true);
-assert(hasUniqueCharactersArray("abb") === false);
-assert(hasUniqueCharactersArray("") === true);
-assert(hasUniqueCharactersArray("bab") === false);
-assertThrows("You must pass a string", function() {
+u.assert(hasUniqueCharactersArray("abcdefghijklmnopqrstuvwxyz") === true);
+u.assert(hasUniqueCharactersArray("abb") === false);
+u.assert(hasUniqueCharactersArray("") === true);
+u.assert(hasUniqueCharactersArray("bab") === false);
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersArray();
 });
-assertThrows("You must pass a string", function() {
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersArray(1);
 });
 
@@ -187,13 +172,13 @@ function hasUniqueCharactersSort(str) {
   return true;
 };
 
-assert(hasUniqueCharactersSort("abcdefghijklmnopqrstuvwxyz") === true);
-assert(hasUniqueCharactersSort("baa") === false);
-assert(hasUniqueCharactersSort("") === true);
-assert(hasUniqueCharactersSort("bab") === false);
-assertThrows("You must pass a string", function() {
+u.assert(hasUniqueCharactersSort("abcdefghijklmnopqrstuvwxyz") === true);
+u.assert(hasUniqueCharactersSort("baa") === false);
+u.assert(hasUniqueCharactersSort("") === true);
+u.assert(hasUniqueCharactersSort("bab") === false);
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersSort();
 });
-assertThrows("You must pass a string", function() {
+u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersSort(1);
 });
