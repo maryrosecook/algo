@@ -1,6 +1,6 @@
-function assert(assertion) {
-  if (assertion !== true) {
-    throw new Error("Assertion failed");
+function assert(val1, val2) {
+  if (val1 !== val2) {
+    throw new Error("Got " + val1 + " and expected " + val2);
   }
 };
 

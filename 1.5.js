@@ -72,14 +72,14 @@ function oneAway(strA, strB) {
   return true;
 };
 
-u.assert(oneAway("pale", "pale") === true);
-u.assert(oneAway("pale", "ple") === true);
-u.assert(oneAway("ple", "pale") === true);
-u.assert(oneAway("pales", "pale") === true);
-u.assert(oneAway("pale", "bale") === true);
-u.assert(oneAway("pale", "bake") === false);
-u.assert(oneAway("pale", "ppal") === false);
-u.assert(oneAway("pa", "pale") === false);
+u.assert(oneAway("pale", "pale"), true);
+u.assert(oneAway("pale", "ple"), true);
+u.assert(oneAway("ple", "pale"), true);
+u.assert(oneAway("pales", "pale"), true);
+u.assert(oneAway("pale", "bale"), true);
+u.assert(oneAway("pale", "bake"), false);
+u.assert(oneAway("pale", "ppal"), false);
+u.assert(oneAway("pa", "pale"), false);
 
 function oneReplacementAway(s1, s2) {
   var edited = false;
@@ -140,13 +140,13 @@ function oneAwayC(s1, s2) {
   }
 };
 
-u.assert(oneAwayC("ple", "pale") === true);
-u.assert(oneAwayC("pales", "pale") === true);
-u.assert(oneAwayC("pale", "bale") === true);
-u.assert(oneAwayC("pale", "bake") === false);
-u.assert(oneAwayC("pale", "ppal") === false);
-u.assert(oneAwayC("pa", "pale") === false);
-u.assert(oneAwayC("pale", "qqpal") === false);
+u.assert(oneAwayC("ple", "pale"), true);
+u.assert(oneAwayC("pales", "pale"), true);
+u.assert(oneAwayC("pale", "bale"), true);
+u.assert(oneAwayC("pale", "bake"), false);
+u.assert(oneAwayC("pale", "ppal"), false);
+u.assert(oneAwayC("pa", "pale"), false);
+u.assert(oneAwayC("pale", "qqpal"), false);
 
 // What went wrong
 // Is it possible that having to step thorough a horrid keeplotsofthingsinmind is a sign I'm thinking about it wrong? I really struggled to figure out if it was possible to make the wrong operation choice to fix a problem that would then break the rest of the string eg should you look ahead to see if the next character is the right one and then do an insert to fix and got bogged down in trying to come up with examples to prove it was impossible.

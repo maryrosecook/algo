@@ -24,7 +24,7 @@ function urlify(str) {
   return arr.join(""); // n
 };
 
-u.assert(urlify("Mr John Smith") === "Mr%20John%20Smith");
+u.assert(urlify("Mr John Smith"), "Mr%20John%20Smith");
 u.assertThrows("You must pass a string", function() {
   urlify();
 });
@@ -53,7 +53,7 @@ function urlify2(charArray, trueLength) {
 };
 
 var s = "Mr John Smith    ";
-u.assert(urlify2("Mr John Smith    ".split(""), 13) === "Mr%20John%20Smith");
+u.assert(urlify2("Mr John Smith    ".split(""), 13), "Mr%20John%20Smith");
 
 // To improve
 // OK for JS, but missed the fact that when a space gets replaced, its position in the array gets filled with three characters, not one

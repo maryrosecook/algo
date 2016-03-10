@@ -32,10 +32,10 @@ function hasUniqueCharacters(str) {
   return true; // return O(1)
 };
 
-u.assert(hasUniqueCharacters("abc") === true);
-u.assert(hasUniqueCharacters("abb") === false);
-u.assert(hasUniqueCharacters("") === true);
-u.assert(hasUniqueCharacters("bab") === false);
+u.assert(hasUniqueCharacters("abc"), true);
+u.assert(hasUniqueCharacters("abb"), false);
+u.assert(hasUniqueCharacters(""), true);
+u.assert(hasUniqueCharacters("bab"), false);
 u.assertThrows("You must pass a string", function() {
   hasUniqueCharacters();
 });
@@ -61,10 +61,10 @@ function hasUniqueCharactersNoHash(str) {
   return true;
 };
 
-u.assert(hasUniqueCharactersNoHash("abc") === true);
-u.assert(hasUniqueCharactersNoHash("abb") === false);
-u.assert(hasUniqueCharactersNoHash("") === true);
-u.assert(hasUniqueCharactersNoHash("bab") === false);
+u.assert(hasUniqueCharactersNoHash("abc"), true);
+u.assert(hasUniqueCharactersNoHash("abb"), false);
+u.assert(hasUniqueCharactersNoHash(""), true);
+u.assert(hasUniqueCharactersNoHash("bab"), false);
 u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersNoHash();
 });
@@ -105,10 +105,10 @@ function hasUniqueCharactersArray(str) {
   return true;
 };
 
-u.assert(hasUniqueCharactersArray("abc") === true);
-u.assert(hasUniqueCharactersArray("abb") === false);
-u.assert(hasUniqueCharactersArray("") === true);
-u.assert(hasUniqueCharactersArray("bab") === false);
+u.assert(hasUniqueCharactersArray("abc"), true);
+u.assert(hasUniqueCharactersArray("abb"), false);
+u.assert(hasUniqueCharactersArray(""), true);
+u.assert(hasUniqueCharactersArray("bab"), false);
 u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersArray();
 });
@@ -143,10 +143,10 @@ function hasUniqueCharactersBit(str) {
 };
 
 
-u.assert(hasUniqueCharactersArray("abcdefghijklmnopqrstuvwxyz") === true);
-u.assert(hasUniqueCharactersArray("abb") === false);
-u.assert(hasUniqueCharactersArray("") === true);
-u.assert(hasUniqueCharactersArray("bab") === false);
+u.assert(hasUniqueCharactersArray("abcdefghijklmnopqrstuvwxyz"), true);
+u.assert(hasUniqueCharactersArray("abb"), false);
+u.assert(hasUniqueCharactersArray(""), true);
+u.assert(hasUniqueCharactersArray("bab"), false);
 u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersArray();
 });
@@ -172,10 +172,10 @@ function hasUniqueCharactersSort(str) {
   return true;
 };
 
-u.assert(hasUniqueCharactersSort("abcdefghijklmnopqrstuvwxyz") === true);
-u.assert(hasUniqueCharactersSort("baa") === false);
-u.assert(hasUniqueCharactersSort("") === true);
-u.assert(hasUniqueCharactersSort("bab") === false);
+u.assert(hasUniqueCharactersSort("abcdefghijklmnopqrstuvwxyz"), true);
+u.assert(hasUniqueCharactersSort("baa"), false);
+u.assert(hasUniqueCharactersSort(""), true);
+u.assert(hasUniqueCharactersSort("bab"), false);
 u.assertThrows("You must pass a string", function() {
   hasUniqueCharactersSort();
 });

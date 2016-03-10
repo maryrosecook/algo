@@ -42,11 +42,11 @@ u.assertThrows("Please pass two strings", function() {
 u.assertThrows("Please pass two strings", function() {
   checkPermutationsSort("", 1);
 });
-u.assert(checkPermutationsSort("", ""));
-u.assert(checkPermutationsSort("abc", "cab"));
-u.assert(checkPermutationsSort("abc", "cabd") === false);
-u.assert(checkPermutationsSort("abc", "cbaa") === false);
-u.assert(checkPermutationsSort("abc", "caa") === false);
+u.assert(checkPermutationsSort("", ""), true);
+u.assert(checkPermutationsSort("abc", "cab"), true);
+u.assert(checkPermutationsSort("abc", "cabd"), false);
+u.assert(checkPermutationsSort("abc", "cbaa"), false);
+u.assert(checkPermutationsSort("abc", "caa"), false);
 
 // Time complexity: n1 + n2 + n1 === O(n)
 // Space complexity: max(n1, n2) === O(n)
@@ -81,11 +81,11 @@ function checkPermutationsHash(str1, str2) {
   return true;
 };
 
-u.assert(checkPermutationsHash("", ""));
-u.assert(checkPermutationsHash("abc", "cab"));
-u.assert(checkPermutationsHash("abc", "cabd") === false);
-u.assert(checkPermutationsHash("abc", "cbaa") === false);
-u.assert(checkPermutationsHash("abc", "caa") === false);
+u.assert(checkPermutationsHash("", ""), true);
+u.assert(checkPermutationsHash("abc", "cab"), true);
+u.assert(checkPermutationsHash("abc", "cabd"), false);
+u.assert(checkPermutationsHash("abc", "cbaa"), false);
+u.assert(checkPermutationsHash("abc", "caa"), false);
 
 // corrected based on solution
 function checkPermutationsHash2(str1, str2) {
@@ -115,11 +115,11 @@ function checkPermutationsHash2(str1, str2) {
   return true;
 };
 
-u.assert(checkPermutationsHash2("", ""));
-u.assert(checkPermutationsHash2("abc", "cab"));
-u.assert(checkPermutationsHash2("abc", "cabd") === false);
-u.assert(checkPermutationsHash2("abc", "cbaa") === false);
-u.assert(checkPermutationsHash2("abc", "caa") === false);
+u.assert(checkPermutationsHash2("", ""), true);
+u.assert(checkPermutationsHash2("abc", "cab"), true);
+u.assert(checkPermutationsHash2("abc", "cabd"), false);
+u.assert(checkPermutationsHash2("abc", "cbaa"), false);
+u.assert(checkPermutationsHash2("abc", "caa"), false);
 
 // What I could have done better
 // Think about if I can use the data structures I know (didn't realise I could use a hash map until the "there is an O(n) time complexity solution").

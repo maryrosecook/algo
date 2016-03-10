@@ -52,10 +52,10 @@ function palindromePermutation(str) {
   return true;
 };
 
-u.assert(palindromePermutation("Tact Coa") === true);
-u.assert(palindromePermutation("abcd efg") === false);
-u.assert(palindromePermutation("cdadq adc") === false);
-u.assert(palindromePermutation("cdaqqq adc") === true);
+u.assert(palindromePermutation("Tact Coa"), true);
+u.assert(palindromePermutation("abcd efg"), false);
+u.assert(palindromePermutation("cdadq adc"), false);
+u.assert(palindromePermutation("cdaqqq adc"), true);
 
 // Assumption: only A-Z and a-z
 function palindromePermutationBit(str) {
@@ -77,10 +77,10 @@ function palindromePermutationBit(str) {
   return characterCounts === 0 || ((characterCounts - 1) & characterCounts) === 0;
 };
 
-u.assert(palindromePermutationBit("Tact Coa") === true);
-u.assert(palindromePermutationBit("abcd efg") === false);
-u.assert(palindromePermutationBit("cdadq adc") === false);
-u.assert(palindromePermutationBit("cdaqqq adc") === true);
+u.assert(palindromePermutationBit("Tact Coa"), true);
+u.assert(palindromePermutationBit("abcd efg"), false);
+u.assert(palindromePermutationBit("cdadq adc"), false);
+u.assert(palindromePermutationBit("cdaqqq adc"), true);
 
 // Things to improve
 // Think about what I DON'T have to do and whether that helps makes things easier or guides the way.  In this problem, initially I worked vaguely like I had to return a palindrome (because I was thinking about building one).
