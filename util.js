@@ -10,7 +10,10 @@ function assertThrows(message, fn) {
     throw new Error("Expected exception with message: " + message);
   } catch (e) {
     if (e.message !== message) {
-      throw new Error("Expected exception with message: " + message);
+      throw new Error("Expected exception with message: " +
+                      message +
+                      ", but got exception with message: " +
+                      e.message);
     }
   }
 };
